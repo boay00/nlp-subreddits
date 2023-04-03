@@ -12,7 +12,7 @@
 
 The '12th man' of the team is a common trope used by football pundits, which describes the enormous positive impact a strong supporting crowd can have on the performance of a Football team. Maintaining positive morale and community spirit is a vital component of sporting success. The planning committee of Queen's Park Rangers FC has requested us to look into the knock on effect of poor sporting performance and community activity.
 
-This project looks at how a teams overall performance can effect the overall activity and language of that teams reddit community, and whether language differences caused by team scale or geography are distinguishable though the balanced accuraacy of language processing models.
+This project looks at how a teams overall performance can affect the overall activity and language of that teams reddit community, and whether language differences caused by team scale or geography are distinguishable through the balanced accuracy of language processing models.
 
 ---
 
