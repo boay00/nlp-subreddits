@@ -1,181 +1,91 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 3: Web APIs & NLP
-
-### Description
-
-In week four we've learned about a few different classifiers. In week five we'll learn about webscraping, APIs, and Natural Language Processing (NLP). This project will put those skills to the test.
-
-For project 3, your goal is two-fold:
-1. Using [Pushshift's](https://api.pushshift.io/redoc) API, you'll collect posts from two subreddits of your choosing.
-2. You'll then use NLP to train a classifier on which subreddit a given post came from. This is a binary classification problem.
-
-
-#### About the API
-
-Pushshift's API is fairly straightforward. For example, if I want the posts from [`/r/boardgames`](https://www.reddit.com/r/boardgames), all I have to do is use the following url: https://api.pushshift.io/reddit/search/submission?subreddit=boardgames
-
-Updated (3/2023) documentation for the FastAPI [here](https://api.pushshift.io/redoc) 
-
----
-## Checkpoints and Advice
-
-If you aren't familiar with [reddit](https://www.reddit.com/), go check it out and browse different subreddits. Each subreddit is like a forum on a different topic. [Here's a list of subreddits by topic.](https://www.reddit.com/r/ListOfSubreddits/wiki/listofsubreddits)
-
-- In your project you can classify posts, comments, titles, or some combination of those things. What you choose will partly determine how difficult your data cleaning will be and how challenging the classification task will be for your algorithms. In your presentation and executive summary, **tell us what you used**.
-- You can also include other information from posts or comments as features, but you must include some text.
-- You can make the project more challenging by choosing subreddits that are more similar.
-- **By the EOD Friday, 3/24/2023, you must input your chosen subreddits into the google doc we will give you. You may not choose the same two subreddits as one of your peers: first come, first served.** Please include a breakdown of the post count for each as well.
-- You should aim to have a function built to pull down data from the API by this date (3/24/23) as well.
-- The more data you can pull the better for your classifier. **You will want data from at least 3000 unique, non-null posts from each subreddit.**
+# README.md
 
 ---
 
-### Requirements
-
-- Gather and prepare your data using the `requests` library.
-- **Create and compare at least two models**. These can be any classifier of your choosing: logistic regression, Naive Bayes, KNN, SVM, Random Forest Classifier, etc.
-  - **Bonus**: use a Naive Bayes classifier
-- You **must** build a robust commit history on GHE for this project, with the first commit no later than next Monday, 3/28/23.
-- A Jupyter Notebook with your analysis for a peer audience of data scientists.
-- An executive summary of your results.
-- A short presentation outlining your process and findings for a semi-technical audience.
-
-**Pro Tip:** You can find a good example executive summary [here](https://www.proposify.biz/blog/executive-summary).
+# Project 3
 
 ---
 
-### Necessary Deliverables / Submission
+## Natural Language Processing on 'superhoops' and 'LiverpoolFC' Subreddits
 
-- Code and executive summary must be in a clearly commented Jupyter Notebook.
-- You must submit your slide deck.
-- Materials must be submitted by **11:59 PM EST on Monday, April 3rd 2023**.
-- Presentation must be ready by **09:00 AM EST on Monday, April 3rd 2023**.
+### Problem Statement
 
----
+The '12th man' of the team is a common trope used by football pundits, which describes the enormous positive impact a strong supporting crowd can have on the performance of a Football team. Maintaining positive morale and community spirit is a vital component of sporting success. The planning committee of Queen's Park Rangers FC has requested us to look into the knock on effect of poor sporting performance and community activity.
 
-## Rubric
-You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
-
-For Project 3 the evaluation categories are as follows:<br>
-**The Data Science Process**
-- Problem Statement
-- Data Collection
-- Data Cleaning & EDA
-- Preprocessing & Modeling
-- Evaluation and Conceptual Understanding
-- Conclusion and Recommendations
-
-**Organization and Professionalism**
-- Organization
-- Visualizations
-- Python Syntax and Control Flow
-- Presentation
-
-**Scores will be out of 30 points based on the 10 categories in the rubric.** <br>
-*3 points per section*<br>
-
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
-
-
-### The Data Science Process
-
-**Problem Statement**
-- Is it clear what the goal of the project is?
-- What type of model will be developed?
-- How will success be evaluated?
-- Is the scope of the project appropriate?
-- Is it clear who cares about this or why this is important to investigate?
-- Does the student consider the audience and the primary and secondary stakeholders?
-
-**Data Collection**
-- Was enough data gathered to generate a significant result?
-- Was data collected that was useful and relevant to the project?
-- Was data collection and storage optimized through custom functions, pipelines, and/or automation?
-- Was thought given to the server receiving the requests such as considering number of requests per second?
-
-**Data Cleaning and EDA**
-- Are missing values imputed/handled appropriately?
-- Are distributions examined and described?
-- Are outliers identified and addressed?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA?
-
-**Preprocessing and Modeling**
-- Is text data successfully converted to a matrix representation?
-- Are methods such as stop words, stemming, and lemmatization explored?
-- Does the student properly split and/or sample the data for validation/training purposes?
-- Does the student test and evaluate a variety of models to identify a production algorithm (**AT MINIMUM:** two classification models, **BONUS:** try a Naive Bayes)?
-- Does the student defend their choice of production model relevant to the data at hand and the problem?
-- Does the student explain how the model works and evaluate its performance successes/downfalls?
-
-**Evaluation and Conceptual Understanding**
-- Does the student accurately identify and explain the baseline score?
-- Does the student select and use metrics relevant to the problem objective?
-- Does the student interpret the results of their model for purposes of inference?
-- Is domain knowledge demonstrated when interpreting results?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
-
-**Conclusion and Recommendations**
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-- Does the conclusion answer the original problem statement?
-- Does the student address how findings of this research can be applied for the benefit of stakeholders?
-- Are future steps to move the project forward identified?
-
-
-### Organization and Professionalism
-
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
-- Is there a robust commit history?
-
-**Visualizations**
-- Are sufficient visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Are plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
-
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Are `sklearn` and `NLTK` methods used appropriately?
-
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
-
+This project looks at how a teams overall performance can effect the overall activity and language of that teams reddit community, and whether language differences caused by team scale or geography are distinguishable though the balanced accuraacy of language processing models.
 
 ---
 
-### Why did we choose this project for you?
-This project covers three of the biggest concepts we cover in the class: Classification Modeling, Natural Language Processing and Data Wrangling/Acquisition.
+# Important Notes
 
-Part 1 of the project focuses on **Data wrangling/gathering/acquisition**. This is a very important skill as not all the data you will need will be in clean CSVs or a single table in SQL.  There is a good chance that wherever you land you will have to gather some data from some unstructured/semi-structured sources; when possible, requesting information from an API, but often scraping it because they don't have an API (or it's terribly documented).
+During modeling of initial tests, damage to the cpu of this machine resulted in dramtically reduced performance whilst fitting language models on large vectorised datasets. In 4-preprocessing-modeling, the code file displays the accuracy scores of the inital models before cleaning was complete, as well as accuracy scores from the same models fit with 10,000 sample observations taken from a alphabetically sorted clean dataframe. The target variable distribution was very close in comparison to the complete dataframe, however scores are obviously going to be misrepresentative of the overall complete dataframe. Once I have access to better hardware, I will update this file with the final scores. **Thanks!!**
 
-Part 2 of the project focuses on **Natural Language Processing** and converting standard text data (like Titles and Comments) into a format that allows us to analyze it and use it in modeling.
+---
 
-Part 3 of the project focuses on **Classification Modeling**.  Given that project 2 was a regression focused problem, we needed to give you a classification focused problem to practice the various models, means of assessment and preprocessing associated with classification.   
+### Data Dictionary
+
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|**subreddit**|object|qpr.csv|the string name of the **subreddit**|
+|**body**|object|qpr.csv|the **text** body used to fit models|
+|**length**|int|qpr.csv|the length of the text body in **words**|
+|**score**|int|qpr_posts.csv|the number of upvotes - the number of downvotes on a post|
+|**num_comments**|int|qpr_posts.csv|the **number of comments** on a post|
+|**date_posted**|object|qpr_posts.csv|date that the post was made|
+|**id**|object|qpr_posts.csv|the **unique id code** of the post|
+|---|---|---|---|
+|**subreddit**|object|liv-2.csv|the string name of the **subreddit**|
+|**body**|object|liv-2.csv|the **text** body used to fit models|
+|**length**|int|liv-2.csv|the length of the text body in **words**|
+|**score**|int|liv-2.csv|the number of upvotes - the number of downvotes on a post|
+|**num_comments**|int|liv-2.csv|the **number of comments** on a post|
+|**date_posted**|object|liv-2.csv|date that the post was made|
+|**id**|object|liv-2.csv|the **unique id code** of the post|
+
+---
+
+### Overview of Analysis
+
+- Lots of similar words appeared in both subreddits such as: game, player, league, season etc.
+- klopp (Liverpool manager) appears on the most common words for Liverpool, whilst qpr managers failed to appear on their common words list. This suggests a stronger manager to community connection when compared to qpr.
+- Interestingly, goal appears in the top words in the Liverpool subreddit, but does not in QPRs. This may be because of a lack of comment data from liverpools subreddit. Goal would likely appear in main posts more frequently than comments.
+ --- 
+- Liverpool subreddit has a much higher percentage of posts with 4 of the 5 swear words. 'Crap' is however more commonly used in the qpr subreddit. This may be a result of dialect differences between northern and southern fanbases. These results are taken from purely post data, excluding comments.
+- The expectation of including comments in the data was that the occurence of swearing would increase. When compared to the data from only main posts, we can see that the level of swearing is much more comparable between the two subreddits. Decreased exposure to readers when commenting may remove some of the filter for inappropriate language, increasing the occurence. Pulling extra data from liverpool comments would be interesting to investigate this trend.
+---
+- Liverpool Average number of posts per year increases until 2018, and steadily decreases afterwards, data from 2023 is not reliable since only a few months have passed.
+- Improved team performances generally correlate with an increase in total yearly posts in the liverpool instance. Perhaps prolonged success could be causing a drop in community activity however there may be many factors causing this decline.
+
+- Relative success for QPR between 2011 and 2015 also is shown to be the most active years for this subreddit. 2011 is low because not only was the subreddit new, but reddit in general was not a popular resource.
+- Relegation in 2015 clearly reduced community activity and post quantities have never fully recovered since QPRs time in the Premier League (1st division). The most active year was a year in the championship (2nd Division) in 2014, however this season was a year of high win percentage when compared to low finishes in the top division, so increased activity is likely.
+---
+- Unlike the overall activity, there does not seem to be a trend in the post approval with team performance in the QPR subreddit. 
+- There is a strong match in the trend for the liverpool subreddit, however the upvote trend is very similar to the qpr subreddit trend, so it cannot be confirmed that the improved team performance is causing this.
+- Strangely, the qpr subreddit drops in average upvote score in 2022, perhaps due to a subduing in community activity for this subreddit. Years spanning the SARS-CoV-2 pandemic coincide with the highest average post score, perhaps caused by an increase in online viewing of sport during this period.
+---
+- The liverpool average word count has decreased over the last decade, particularly dropping during the years of success in 2018 - 2022. Perhaps increased influx of new fans in this time wanting to post simpler picture posts of iconic goals or moments in this period is causing this.
+- Otherwise, years of struggle for liverpool (pre 2017) would be a time of increased anguish in the community, leading to longer and more opinionated posts. 
+- This data is not reliable, since all posts below 10 words in length have been filtered out. One of these subreddits may have a huge number of these posts, which would massively reduce the average word count.
+
+---
+
+# Conclusions
+
+Despite having little attention directed to cleaning of special characters, numbers, non english words and spam posts, these models generally performed well in terms of balanced accuracy. They all successfully outperformed the null model, but particularly effective models were Multinomial Naive Bayes and a stacking model combining Logistic regression, BernoulliNB and MultinomialNB. On unclean data, these models achieved a balanced accuracy of 92.4%, as well as scoring 83.5% on a small sample of clean data.
+
+With greater computational power, I believe the MultinomialNB and stack models would have produced very strong balanced accuracy scores on fully cleaned data, and would have therefore been very effective in predicting the original subreddit for a body of text. 
+
+These findings show that despite the similarity in these subreddits, the language used is distinct enough to successfully distinguish and hence correctly predict the original subreddit with very high accuracy. 
+
+##### Further Conclusions
+
+- The success of a football team generally has a positive impact on community activity and post frequency.
+- Larger teams are likely to have a more toxic community in terms of swear words used per post than smaller teams. There are exceptions to this however, since some words are more commonly used in certain dialects. 
+- In general, increased success of a team results in a lower post length on average.
+- Language models are shown to be able to predict the original subreddit of a text body with high accuracy, despite initial predictions suggesting that the language used would be too similar to form clear distinctions.
+
+# Recommendations
+
+- Collecting data proved to be challenging, since Liverpools subreddit was so large, and QPRs was so small. Collecting comments from Liverpools subreddit would result in too large a data imbalance, but would be required to reliably compare language across all types of text body. Certain language is more likely in comments than in prose paragraphs or titles. Despite this, the choice to only use first level comments would have reduced this, since reactions to comments are likely contributing to differences in language used the most.
+
+- Comparing language used with a focus on dialect differences would be an interesting follow up route, which was breifly introduced upon inspection of swear word frequency.
